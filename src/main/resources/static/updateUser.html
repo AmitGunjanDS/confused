@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <title>update</title>
+</head>
+<body>
+
+<div class="box">
+    <h1>SIGN-UP</h1>
+    <form id="myForm" action="/updateProfile" method="post">
+        <i class="fa fa-user icon" aria-hidden="true"></i>
+        <input type="text" id="name" name="name" value=""><br>
+        <i class="fa fa-phone icon" aria-hidden="true"></i>
+        <input type="text" id="phone" name="phone" value=""><br/>
+        <i class="fa fa-envelope icon" aria-hidden="true"></i>
+        <input type="email" id="email" name="email" value=""><br/>
+
+        <button type="submit" id="submit">Update</button>
+    </form>
+</div>
+
+<script src="UpdateUser.js"></script>
+</body>
+</html>

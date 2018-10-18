@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+</head>
+
+
+<body onload="detailsFill()" style="margin-top: 4rem; background-color: gray;">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <a href="#" class="navbar-brand">Beehyv</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navList">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navList">
+
+        <ul class="nav navbar-nav">
+
+
+            <li class="navbar-item">
+
+                <a href="/login.html" class="nav-link">Login</a>
+            </li>
+            <li class="navbar-item">
+
+                <a href="/signup.html" class="nav-link">SignUp</a>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+</nav>
+
+
+<div class="container-fluid" style="">
+    <div class="row ">
+        <div class="col-md-3 bg-light p-1">
+            <div class=" ">
+                <div class="d-flex justify-content-end pr-4">
+                    <button class="btn btn-sm" data-target="#editModal" data-toggle="modal"><i class="fas fa-edit"></i>
+                    </button>
+                </div>
+
+                <div class="modal" id="editModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+
+                                    <input type="text" id="editFullname" placeholder="Full Name">
+                                    <br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editDesignation" placeholder="Designation">
+                                    <br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editCity"
+                                           placeholder="City"><br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editMobile"
+                                           placeholder="Mobile no."><br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editEmail"
+                                           placeholder="Email"><br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editwebsite"
+                                           placeholder="website"><br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editlang"
+                                           placeholder="Language">
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" onclick="edit()"> Change</button>
+
+                                <button class="btn btn-primary" data-dismiss="modal"> cancel</button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="card-body bg-light">
+                <h5 class="card-title text-center font-weight" id="fullName">Amit Gunjan</h5>
+                <p class="card-text text-center" id="designation">Novice Programmer</p>
+                <hr/>
+                <span><i class="fas fa-map-marker-alt"></i> &nbsp; &nbsp;</span> <span id="city">Hyderabad </span>
+                <br><br>
+                <span><i class="fas fa-mobile-alt"></i> &nbsp; &nbsp;</span>
+                <span id="mobile">8887963361 </span>
+                <br><br>
+                <span><i class="fas fa-envelope"></i> &nbsp;</span><span id="email"> amit@beehyv.com </span><br><br>
+                <p><i class="fab fa-facebook-f"></i> &nbsp; &nbsp;<a id="website" href="#">Amit gunjan</a></p>
+                <span><i class="fas fa-microphone-alt"></i> &nbsp; &nbsp;</span> <span id="lang">Hindi, Magahi, Bhojpuri,English  </span>
+                <hr/>
+                <div class="d-flex justify-content-center">
+                    <i class="fab fa-twitter" style="color: deepskyblue"></i>
+                    <i class="fab fa-soundcloud" style="color:coral"></i>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-9 bg-light">
+            <div class="">
+                <h4>Background</h4>
+                <hr/>
+                <div id="about" class="row">
+                    <div class="col-md-1"><i class="fas fa-address-card"></i></div>
+                    <div class="col-md-11">
+                        <h4 class="text-secondary">About</h4>
+                        <hr/>
+                        <p>Signup and signin should work in navbar.
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div id="work" class="row">
+                    <div class="col-md-1"><i class="fas fa-briefcase"></i></div>
+                    <div class="col-md-11">
+                        <h4 class="text-secondary">Work Experiance</h4>
+                        <hr/>
+                        <p class="">
+                            <strong>Project 1.</strong><a class=" d-inline" href="#">Clean Electric</a>
+                        </p>
+
+                        <p class="text-secondary">
+                            <small>
+                                july 16 - july 17 &nbsp; &nbsp;<i class="fas fa-clock"></i> 1 year
+                            </small>
+                        </p>
+                        <p>Modify your existing project website close to the image
+                        </p>
+                        <ul>
+                            <li>hello</li>
+                            <li>How are you?</li>
+                            <li>How was your Day?</li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+                <div id="skill" class="row">
+                    <div class="col-md-1"><i class="fas fa-pen-fancy"></i></div>
+                    <div class="col-md-11">
+                        <h4 class="text-secondary">Skill</h4>
+                        <hr/>
+                        <p class="ml-5 mr-1 border-left border-success"><span class="font-weight-bold ml-3">Web Development</span><br>
+                            <span class="ml-3"><span class="badge badge-info">HTML</span>&nbsp; <span
+                                    class="badge badge-info">CSS</span>&nbsp; <span
+                                    class="badge badge-info">JavaScript</span>
+                                </span></p>
+                        <hr/>
+                        <p class="ml-5 mr-1 border-left border-success"><span
+                                class="font-weight-bold  ml-3">Compression</span><br>
+                            <span class="ml-3"><span class="badge badge-info">MPEG</span>&nbsp; <span
+                                    class="badge badge-info">Mp4</span>&nbsp; <span class="badge badge-info">GIF</span>
+                                </span></p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="edu" class="row">
+                <div class="col-md-1"><i class="fas fa-graduation-cap"></i></div>
+                <div class="col-md-11">
+                    <h4 class="text-secondary">Education</h4>
+                    <hr/>
+                    <p class="ml-5 mr-1"><span class="font-weight-bold">Bachelor of Technology
+                                    </span>
+                        <span>, IIT (BHU)</span><br>
+                        <span class="text-muted"><small>Aug,2014-May,2018</small></span><br>
+                        <span>CGPA: <i>bahut kam hai</i></span><br>
+                        <span class="badge badge-info">DB1101-Basic SQL</span>&nbsp; <span class="badge badge-info">CS2011-Java Introduction</span>
+                    </p>
+
+
+                </div>
+
+            </div>
+
+            <div id="interest" class="row">
+                <div class="col-md-1"><i class="fas fa-heart"></i></div>
+                <div class="col-md-11">
+                    <h4 class="text-secondary">Interest</h4>
+                    <hr/>
+                    <p class="ml-5 mr-1"><span class="font-weight-bold">Wildlife</span><br>
+                        <span class="badge badge-info">jaanwar pasand nahi</span>&nbsp; <span class="badge badge-info">jungle pasand hai </span>
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dropup text-right fixed-bottom m-4 ">
+            <button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="#about" class="btn">about</a></li>
+                    <li><a href="#work" class="btn">work experience</a></li>
+                    <li><a href="#skill" class="btn">skill</a></li>
+                    <li><a href="#edu" class="btn">education</a></li>
+                    <li><a href="#interest" class="btn">interest</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- Optional JavaScript -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>

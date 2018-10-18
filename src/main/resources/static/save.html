@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>save</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-md-3 bg-light p-1">
+            <div >
+                <div class="d-flex justify-content-end pr-4" style="opacity:0.8">
+                    <button class="btn btn-sm" data-target="#editModal" data-toggle="modal"><i class="fas fa-edit"></i>
+                    </button>
+                </div>
+
+                <div class="modal" id="editModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"> </h4>
+                            </div>
+                            <div class="modal-body">
+                                <form >
+
+                                    <input type="text" id="editName" placeholder="Name">
+                                    <br>
+                                    <hr/>
+
+
+                                    <input type="text" id="editMobile"
+                                           placeholder="Mobile no." value= "#mobile" ><br><hr/>
+
+
+                                    <input type="text" id="editEmail"
+                                           placeholder="Email" ><br>
+
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary"> Change</button>
+
+                                <button class="btn btn-primary" data-dismiss="modal"> cancel</button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-body bg-light">
+                <h5 class="card-title text-center font-weight" id="fullName">Amit Gunjan</h5>
+                <hr/>
+                <span><i class="fas fa-mobile-alt"></i> &nbsp; &nbsp;</span>
+                <span id="mobile">8887963361 </span>
+                <br><br>
+                <span><i class="fas fa-envelope"></i> &nbsp;</span><span id="email"> amit@beehyv.com </span><br><br>
+                <div class="d-flex justify-content-center">
+                    <i class="fab fa-twitter" style="color: deepskyblue"></i>
+                    <i class="fab fa-soundcloud" style="color:coral"></i>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-9 bg-light">
+
+            <h4 style="text-align: center">Welcome </h4>
+            <hr/>
+            <div id="cart" class="container p-1 row" >
+
+
+                <div class="col-md-8 bg-light p-1">
+                    <h4 style="text-align: center">Products</h4>
+                    <hr/>
+                    <div id="products">
+
+                    </div>
+                </div>
+
+
+
+                <div id="order" class="col-md-4 bg-light p-1">
+
+
+                    <div id="cartItem">
+                        <h4 style="text-align: center">Your Cart</h4>
+                        <hr/>
+                        <div class="container">
+                            <div class="col-md-4 bg-light p-1 product">
+                                <h5 class=""></h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <hr/>
+
+
+                    <div id="orderHistory">
+                        <h4 style="text-align: center">Order History</h4>
+                        <hr/>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="dropup text-right fixed-bottom m-4 ">
+            <button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <!--<li> <a href="#about" class="btn">about</a></li>-->
+                    <!--<li> <a href="#work"class="btn">work experience</a></li>-->
+                    <!--<li><a href="#skill"class="btn">skill</a></li>-->
+                    <!--<li> <a href="#edu"class="btn">education</a></li>-->
+                    <!--<li> <a href="#interest"class="btn">interest</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>
+
+
+//
+// // --------------------------------------------------------------------------------------------------------
+//         const addToCartButtonsDOM = document.querySelectorAll('[data-action="ADD_TO_CART"]');
+//         const cartDOM = document.querySelector('.cart');
+//
+//         addToCartButtonsDOM.forEach(addToCartButtonDOM => {
+//                   addToCartButtonDOM.addEventListener('click', () => {
+//                       const productDOM = addToCartButtonDOM.parentNode;
+//                       const product = {
+//                           Id:productDOM.querySelector('.Id').innerText,
+//                           name: productDOM.querySelector('.name').innerText,
+//                           price: productDOM.querySelector('.price').innerText,
+//                           quantity: 1,
+//                       };
+//                       const isInCart = (cart.filter(cartItem => (cartItem.name === product.name)).length > 0);
+// //
+//               if (!isInCart) {
+//                   insertItemToDOM(product);
+//                   cart.push(product);
+//                   saveCart();
+//                   handleActionButtons(addToCartButtonDOM, product);
+//               }
+//           });
+//       });
+//
+//
+//
+//
+//         let cart;
+//         getCart();
+//         function getCart() {
+//             $.ajax({
+//                 url: "/getCart",
+//                 success:function (avilableCart) {
+//
+//                     avilableCart.forEach(element => {
+//                         let fetchedProduct ={
+//                             Id:element.product.prductId,
+//                             name: element.product.productName,
+//                             price: element.product.productPrice,
+//                             quantity: element.quantity,
+//                         }
+//
+//                         insertItemToDOM(fetchedProduct);
+//                     })
+//
+//
+//
+//                 }
+//             })}
+//
+//
+//             function insertItemToDOM(product) {
+//                       cartDOM.insertAdjacentHTML('beforeend', `
+//               <div class="cart__item">
+    //                 <h3 class="id">${product.Id}</h3>
+    //                 <h3 class="cart__item__name">${product.name}</h3>
+    //                 <h3 class="cart__item__price">${product.price}</h3>
+    //                 <button class="btn btn--primary btn--small${(product.quantity === 1 ? ' btn--danger' : '')}" data-action="DECREASE_ITEM">&minus;</button>
+    //                 <h3 class="cart__item__quantity">${product.quantity}</h3>
+    //                 <button class="btn btn--primary btn--small" data-action="INCREASE_ITEM">&plus;</button>
+    //                 <button class="btn btn--danger btn--small" data-action="REMOVE_ITEM">&times;</button>
+    //               </div>
+//             `);
+//
+//                       addCartFooter();
+//                   }
+//
+//
+//
+//
+//
+//
+//
+// //=======================================================================
+//
+//
+//
+//         if (cart.length > 0) {
+//             cart.forEach(cartItem => {
+//                 const product = cartItem;
+//                 insertItemToDOM(product);
+//                 countCartTotal();
+//
+//                 addToCartButtonsDOM.forEach(addToCartButtonDOM => {
+//                     const productDOM = addToCartButtonDOM.parentNode;
+//
+//                     if (productDOM.querySelector('.name').innerText === product.name) {
+//                         handleActionButtons(addToCartButtonDOM, product);
+//                     }
+//                 });
+//
+//             });
+//         }
+//
+//         addToCartButtonsDOM.forEach(addToCartButtonDOM => {
+//             addToCartButtonDOM.addEventListener('click', () => {
+//                 const productDOM = addToCartButtonDOM.parentNode;
+//                 const product = {
+//                     category: productDOM.querySelector('.category').innerText,
+//                     name: productDOM.querySelector('.name').innerText,
+//                     price: productDOM.querySelector('.price').innerText,
+//                     quantity: 1,
+//                 };
+//
+//                 const isInCart = (cart.filter(cartItem => (cartItem.name === product.name)).length > 0);
+//
+//                 if (!isInCart) {
+//                     insertItemToDOM(product);
+//                     cart.push(product);
+//                     saveCart();
+//                     handleActionButtons(addToCartButtonDOM, product);
+//                 }
+//             });
+//         });
+//
+//         function insertItemToDOM(product) {
+//             cartDOM.insertAdjacentHTML('beforeend', `
+//     <div class="cart__item">
+    //       <h3 class="cart__item__id">${product.cartItemId}</h3>
+    //       <h3 class="cart__item__name">${product.name}</h3>
+    //       <h3 class="cart__item__price">${product.price}</h3>
+    //       <button class="btn btn--primary btn--small${(product.quantity === 1 ? ' btn--danger' : '')}" data-action="DECREASE_ITEM">&minus;</button>
+    //       <h3 class="cart__item__quantity">${product.quantity}</h3>
+    //       <button class="btn btn--primary btn--small" data-action="INCREASE_ITEM">&plus;</button>
+    //       <button class="btn btn--danger btn--small" data-action="REMOVE_ITEM">&times;</button>
+    //     </div>
+//   `);
+//
+//             addCartFooter();
+//         }
+//
+//         function handleActionButtons(addToCartButtonDOM, product) {
+//             addToCartButtonDOM.innerText = 'In Cart';
+//             addToCartButtonDOM.disabled = true;
+//
+//             const cartItemsDOM = cartDOM.querySelectorAll('.cart__item');
+//             cartItemsDOM.forEach(cartItemDOM => {
+//                 if (cartItemDOM.querySelector('.cart__item__name').innerText === product.name) {
+//                     cartItemDOM.querySelector('[data-action="INCREASE_ITEM"]').addEventListener('click', () => increaseItem(product, cartItemDOM));
+//                     cartItemDOM.querySelector('[data-action="DECREASE_ITEM"]').addEventListener('click', () => decreaseItem(product, cartItemDOM, addToCartButtonDOM));
+//                     cartItemDOM.querySelector('[data-action="REMOVE_ITEM"]').addEventListener('click', () => removeItem(product, cartItemDOM, addToCartButtonDOM));
+//                 }
+//             });
+//         }
+//
+//         function increaseItem(product, cartItemDOM) {
+//             cart.forEach(cartItem => {
+//                 if (cartItem.name === product.name) {
+//                     cartItemDOM.querySelector('.cart__item__quantity').innerText = ++cartItem.quantity;
+//                     cartItemDOM.querySelector('[data-action="DECREASE_ITEM"]').classList.remove('btn--danger');
+//                     saveCart();
+//                 }
+//             });
+//         }
+//
+//         function decreaseItem(product, cartItemDOM, addToCartButtonDOM) {
+//             cart.forEach(cartItem => {
+//                 if (cartItem.name === product.name) {
+//                     if (cartItem.quantity > 1) {
+//                         cartItemDOM.querySelector('.cart__item__quantity').innerText = --cartItem.quantity;
+//                         saveCart();
+//                     } else {
+//                         removeItem(product, cartItemDOM, addToCartButtonDOM);
+//                     }
+//
+//                     if (cartItem.quantity === 1) {
+//                         cartItemDOM.querySelector('[data-action="DECREASE_ITEM"]').classList.add('btn--danger');
+//                     }
+//                 }
+//             });
+//         }
+//
+//         function removeItem(product, cartItemDOM, addToCartButtonDOM) {
+//             cartItemDOM.classList.add('cart__item--removed');
+//             setTimeout(() => cartItemDOM.remove(), 250);
+//             cart = cart.filter(cartItem => cartItem.name !== product.name);
+//             saveCart();
+//             addToCartButtonDOM.innerText = 'Add To Cart';
+//             addToCartButtonDOM.disabled = false;
+//
+//             if (cart.length < 1) {
+//                 document.querySelector('.cart-footer').remove();
+//             }
+//         }
+//
+//         function addCartFooter() {
+//             if (document.querySelector('.cart-footer') === null) {
+//                 cartDOM.insertAdjacentHTML('afterend', `
+//       <div class="cart-footer">
+    //         <button class="btn btn--danger" data-action="CLEAR_CART">Clear Cart</button>
+    //         <button class="btn btn--primary" data-action="CHECKOUT">Pay</button>
+    //       </div>
+//     `);
+//
+//                 document.querySelector('[data-action="CLEAR_CART"]').addEventListener('click', () => clearCart());
+//
+//             }
+//         }
+//
+//         function clearCart() {
+//             cartDOM.querySelectorAll('.cart__item').forEach(cartItemDOM => {
+//                 cartItemDOM.classList.add('cart__item--removed');
+//                 setTimeout(() => cartItemDOM.remove(), 250);
+//             });
+//
+//             cart = [];
+//             localStorage.removeItem('cart');
+//             document.querySelector('.cart-footer').remove();
+//
+//             addToCartButtonsDOM.forEach(addToCartButtonDOM => {
+//                 addToCartButtonDOM.innerText = 'Add To Cart';
+//                 addToCartButtonDOM.disabled = false;
+//             });
+//         }
+//
+//
+//         function countCartTotal() {
+//             let cartTotal = 0;
+//             cart.forEach(cartItem => cartTotal += cartItem.quantity * cartItem.price);
+//             document.querySelector('[data-action="CHECKOUT"]').innerText = `Pay $${cartTotal}`;
+//         }
+//
+//
+//
+//         function saveCart() {
+//             localStorage.setItem('cart', JSON.stringify(cart));
+//             countCartTotal();
+//         }

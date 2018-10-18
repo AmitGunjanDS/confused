@@ -1,0 +1,53 @@
+#details {
+    margin: auto;
+    width: 50%;
+
+}
+
+#welcome-msg {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+
+}
+
+#profile-pic {
+    width: 50%;
+    height: 50%;
+    align-content: center;
+
+}
+
+#profile-pic img {
+    height: 10%;
+    width: 10%;
+    padding-left: 50%;
+}
+
+.changeDp {
+    float: right;
+    width: 10%;
+    align-content: center;
+
+}
+
+.rows {
+    position: relative;
+    width: 80%;
+    float: left;
+
+}
+
+.display {
+    position: relative;
+    width: 90%;
+    float: left;
+}
+
+.cancel {
+    position: relative;
+    width: 10%;
+    float: right;
+
+}
+

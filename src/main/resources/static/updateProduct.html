@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <title>Add Product</title>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Edit Product</h1>
+    <form id="myForm" action="/addProduct" method="post">
+        <h3 id="prductId"></h3>
+        <input type="text" id="name" name="name" placeholder=" Enter Product"><br>
+        <input type="number" id="price" name="price" placeholder="price"><br/>
+        <input type="radio" name="category" value="FOOD"><span> FOOD</span><br>
+        <input type="radio" name="category" value="BOOK"><span> BOOK</span><br>
+        <input type="radio" name="category" value="CLOTH"><span> CLOTH</span> <br>
+        <input type="radio" name="category" value="INSTRUMENT"><span> INSTRUMENT</span> <br>
+        <input type="radio" name="category" value="ANONYMOUS" checked><span> ANONYMOUS</span> <br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</div>
+
+
+</body>
+</html>
